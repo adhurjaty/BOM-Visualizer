@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+#pup {
+  position:absolute;
+  z-index:200; /* aaaalways on top*/
+  padding: 3px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 250px;
+  border: 1px solid black;
+  background-color: #777;
+  color: white;
+  font-size: 0.95em;
+}
+
+img {
+	width: 100%;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/nhpup_1.1.js"></script>
+<script type="text/javascript" src="autocomplete.js"></script>
+<script src="/tree.js"></script>
+
+<link rel="stylesheet" href="fonts/bariol/bariol.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
+
+<hr/>
+
+<div id="test" style="width:100%; height:100%;"></div>
+
+<!--
+<script language="JavaScript">
+
+    //Variable to hold autocomplete options
+    var keys;
+
+    //Load US States as options from CSV - but this can also be created dynamically
+    d3.csv("states.csv",function (csv) {
+        keys=csv;
+        start();
+    });
+
+
+    //Call back for when user selects an option
+    function onSelect(d) {
+        alert(d.State);
+    }
+
+    //Setup and render the autocomplete
+    function start() {
+        var mc = autocomplete(document.getElementById('test'))
+                .keys(keys)
+                .dataField("State")
+                .placeHolder("Search States - Start typing here")
+                .width(960)
+                .height(500)
+                .onSelected(onSelect)
+                .render();
+    }
+
+</script>
+
+
+<button onclick="clear_search()">Clear Search</button>
+
+-->
